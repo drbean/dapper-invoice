@@ -1,4 +1,4 @@
-% dapper-invoice.cls -- a billable-hours invoice featuring style over substance
+% dapper-invoice.cls -- a billable-s/hours/words/ invoice featuring style over substance
 
 \ProvidesClass{dapper-invoice}[2015/04/12]
 \NeedsTeXFormat{LaTeX2e}
@@ -129,7 +129,7 @@
 
 \newcounter{colskipcount}
 
-\newenvironment{hoursItemization}{
+\newenvironment{wordsItemization}{
     \setcounter{colskipcount}{5}
     \setlength\LTleft{0pt}
     \setlength\LTright{0pt}
@@ -138,7 +138,7 @@
     \noalign{\smallskip}
     {\itemizationHeaderStyle Date} &
     {\itemizationHeaderStyle Description} &
-    \multicolumn{2}{l}{\itemizationHeaderStyle Hours} &
+    \multicolumn{2}{l}{\itemizationHeaderStyle Words} &
     {\itemizationHeaderStyle Rate} &
     {\itemizationHeaderStyle Amount}
     \\
@@ -154,7 +154,7 @@
     \end{longtable}
 }
 
-\newenvironment{hoursItemizationWithProject}{
+\newenvironment{wordsItemizationWithProject}{
     \setcounter{colskipcount}{6}
     \setlength\LTleft{0pt}
     \setlength\LTright{0pt}
@@ -164,7 +164,7 @@
     {\itemizationHeaderStyle Date} &
     {\itemizationHeaderStyle Project} &
     {\itemizationHeaderStyle Description} &
-    \multicolumn{2}{l}{\itemizationHeaderStyle Hours} &
+    \multicolumn{2}{l}{\itemizationHeaderStyle Words} &
     {\itemizationHeaderStyle Rate} &
     {\itemizationHeaderStyle Amount}
     \\
@@ -196,7 +196,7 @@
     \ifnum\Numerator=75 ¾\fi%
 }
 
-\newcommand*\@formatHoursLeft[1]{
+\newcommand*\@formatWordsLeft[1]{
     \pgfmathtruncatemacro{\WholePortion}{int(#1)}%
     \pgfmathtruncatemacro{\Numerator}{100*(#1-\WholePortion)}%
     \ifnum\WholePortion=0%
@@ -206,7 +206,7 @@
     \fi%
 }
 
-\newcommand*\@formatHoursRight[1]{
+\newcommand*\@formatWordsRight[1]{
     \pgfmathtruncatemacro{\WholePortion}{int(#1)}%
     \pgfmathtruncatemacro{\Numerator}{100*(#1-\WholePortion)}%
     \ifnum\WholePortion=0%
@@ -220,8 +220,8 @@
     \begin{minipage}[t]{.6\textwidth}
         \begin{itemize}[leftmargin=0pt, labelsep=1pt, itemsep=0pt] \itemizationRowStyle #4 \end{itemize}
     \end{minipage} &
-    {\itemizationRowStyle \@formatHoursLeft{#2}} &
-    {\itemizationRowStyle \@formatHoursRight{#2}} &
+    {\itemizationRowStyle \@formatWordsLeft{#2}} &
+    {\itemizationRowStyle \@formatWordsRight{#2}} &
     {\itemizationRowStyle \currencysym#3} &
     {\itemizationRowStyle \currencysym\calcamount{#2}{#3}}
     \\
@@ -234,8 +234,8 @@
     \begin{minipage}[t]{0.5\textwidth}
         \begin{itemize}[leftmargin=0pt, labelsep=1pt, itemsep=0pt] \itemizationRowStyle #5 \end{itemize}
     \end{minipage} &
-    {\itemizationRowStyle \@formatHoursLeft{#2}} &
-    {\itemizationRowStyle \@formatHoursRight{#2}} &
+    {\itemizationRowStyle \@formatWordsLeft{#2}} &
+    {\itemizationRowStyle \@formatWordsRight{#2}} &
     {\itemizationRowStyle \currencysym#3} &
     {\itemizationRowStyle \currencysym\calcamount{#2}{#3}}
     \\
