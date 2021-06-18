@@ -18,7 +18,7 @@
 
 \RequirePackage{eurosym}
 
-\ifthenelse{\equal{\dapper@currency}{dollar}}{\newcommand{\currencysym}{\$}}{}
+\ifthenelse{\equal{\dapper@currency}{dollar}}{\newcommand{\currencysym}{NT\$}}{}
 \ifthenelse{\equal{\dapper@currency}{euro}}{\newcommand{\currencysym}{\euro}}{}
 \ifthenelse{\equal{\dapper@currency}{pound}}{\newcommand{\currencysym}{\textsterling}}{}
 
@@ -29,7 +29,7 @@
 \RequirePackage[hidelinks]{hyperref}
 
 % For adjusting letter spacing
-\RequirePackage{soul}
+\RequirePackage{soulutf8}
 
 % For "At*" hooks
 \RequirePackage{etoolbox}
