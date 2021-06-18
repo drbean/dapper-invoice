@@ -3,7 +3,7 @@
 %\documentclass[letterpaper,currency=euro]{dapper-invoice}
 %\documentclass[letterpaper,currency=pound]{dapper-invoice}
 
-% \usepackage{fontspec}
+\usepackage{fontspec}
 % \setmainfont{texgyrebonum-regular.otf}[Scale=MatchLowercase]
 % \setmainfont{Latin Modern Roman}[Scale=MatchLowercase]
 % \setmainfont{Linux Libertine O}[Scale=MatchLowercase]
@@ -15,13 +15,13 @@
 % \setmonofont{Source Code Pro}[Scale=MatchLowercase]
 % \setmonofont{Fira Mono}[Scale=MatchLowercase]
 % \setmonofont{Sans Regular}[Scale=MatchLowercase]
-% \usepackage{xeCJK}
-% \setCJKmainfont{NotoSansCJK-Regular.ttc}[
-%         Path = /usr/share/fonts/noto/,
-% 	]
+ \usepackage{xeCJK}
+ \setCJKmainfont{NotoSansCJK-Regular.ttc}[
+         Path = /usr/share/fonts/noto/,
+ 	]
 
 \usepackage{graphicx}
-\graphicspath{ {/home/owuser/edit/invoice/} }
+\graphicspath{ {$HOME/edit/invoice/} }
 
 \newcommand{\invoiceNo}{101}
 \newcommand{\balance}{5700}
@@ -58,8 +58,8 @@
         \infoBox{Contact}{Chun-Ping Yeh}
         \infoSub{\faMobilePhone}{\small\slshape +886~(2)~2730-1134 \#3707}
         \infoSub{\tiny\faEnvelope}{\small\slshape \emaillink{royyeh@mail.ntust.edu.tw}}
-	\infoBox{Payer}{National Taiwan University of \\ Science and Technology}
-        \infoBox{Registered}{04126516}
+	\infoBox{抬頭}{國立臺灣科技大學}
+        \infoBox{統編}{04126516}
         \noalign{\addvspace{4ex}}
         \infoBox{}{
             {\large\raisebox{.55\height}\currencysym\huge\formatcurrency{\balance} \arrowbase} \\
