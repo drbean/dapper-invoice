@@ -1,0 +1,105 @@
+\documentclass[a4paper]{dapper-invoice}
+%\documentclass[letterpaper,currency=dollar]{dapper-invoice}
+%\documentclass[letterpaper,currency=euro]{dapper-invoice}
+%\documentclass[letterpaper,currency=pound]{dapper-invoice}
+
+\usepackage{fontspec}
+% \setmainfont{texgyrebonum-regular.otf}[Scale=MatchLowercase]
+% \setmainfont{Latin Modern Roman}[Scale=MatchLowercase]
+% \setmainfont{Linux Libertine O}[Scale=MatchLowercase]
+% \setsansfont{Sans Regular}[Scale=MatchLowercase]
+% \setmonofont{Inconsolata}[Scale=MatchLowercase]
+% \setmonofont{Hack}[Scale=MatchLowercase]
+% \setmonofont{Deja Sans Mono}[Scale=MatchLowercase]
+% \setmonofont{Droid Sans Mono}[Scale=MatchLowercase]
+% \setmonofont{Source Code Pro}[Scale=MatchLowercase]
+% \setmonofont{Fira Mono}[Scale=MatchLowercase]
+% \setmonofont{Sans Regular}[Scale=MatchLowercase]
+ \usepackage{xeCJK}
+ \setCJKmainfont{NotoSansCJK-Regular.ttc}[
+         Path = /usr/share/fonts/noto/,
+        ]
+
+\usepackage{graphicx}
+\graphicspath{ {$HOME/edit/gitedit/invoice/} }
+
+\newcommand{\invoiceNo}{103}
+\newcommand{\balance}{0}
+\newcommand{\duein}{15}% days
+
+\newcommand{\me}{Greg Matheson}
+\newcommand{\clientName}{YA-LING KAO (高雅鈴)}
+
+\setmetadata{\me}{Academic Editing Services}{\invoiceNo}{\clientName}
+
+\defaultfontfeatures{ Path = ./Fonts/ }
+\usepackage{fontawesome}
+
+\begin{document}
+
+\newfontface\mainLightItalic{OpenSans-LightItalic}
+\makeheader{\ \mainLightItalic Academic Editing Services}{\invoiceNo}
+
+\twocolumnlayout{
+    \begin{infoSection}
+        \infoBox{Client}{\clientName \\
+                         \\
+                         國立澎湖科技大學\\
+                         行銷與物流管理學系\\
+                         \\
+                         澎湖縣馬公市六合路300號\\
+                         880, Taiwan\\
+                                         }
+        \infoBox{Project}{Bus driver burnout paper}
+        \infoBox{Contact}{YA-LING KAO (高雅鈴)}
+            \infoSub{\faMobilePhone}{\small\slshape +886-9264115 \#5525}
+        \infoSub{\tiny\faEnvelope}{\small\slshape \emaillink{ylkao@gms.npu.edu.tw}}
+        \infoBox{抬頭}{國立澎湖科技大學}
+        \infoBox{統編}{7187931}
+        \noalign{\addvspace{4ex}}
+        \infoBox{}{
+            {\large\raisebox{.55\height}\currencysym\huge\formatcurrency{\balance} \arrowbase} \\
+            {\small\color{subduedColor} due \duedate{\duein}}
+        }
+    \end{infoSection}
+}{
+    \begin{infoSection}
+        \infoBox{\arrowtarget Payable To}{
+            \me \\
+            Miaoli-shi, Shengli-li,\\
+            16-lin, 133-xiang, 12-hao\\
+            Taiwan
+        }
+        % \infoSub{\faMobilePhone}{\small\slshape +1~(555)~555-5555}
+        \infoSub{\tiny\faEnvelope}{\small\slshape \emaillink{drbean@freeshell.org}}
+    \end{infoSection}
+}
+
+\drawarrow
+
+\addvspace{2ex}
+
+\begin{wordsItemizationWithProject}
+
+    \lineitemp{2022/7/30}{4200}{0.5}{Editing}{
+        \item Text\_E1A1.doc}
+
+    % \lineitemp{2015/4/11}{0.5}{50}{Invoice}{
+    %     \item Packaged Invoice in .cls file}
+
+    \beginsummary
+
+    \summaryline{Total}{\currencysym\formatcurrency{\InvoiceTotal}}
+
+    \summaryline{Paid}{\currencysym\formatcurrency{2100}}
+    \summaryline{Balance Due}{\currencysym\formatcurrency{\balance}} % not really any math support (yet)
+
+\end{wordsItemizationWithProject}
+
+Thanks for letting me read your paper. I hope I can read more of your work in the future.
+
+\includegraphics[angle=00,height=0.06\paperheight,width=0.20\paperwidth]{signature.png}
+ 
+\me
+
+\end{document}
