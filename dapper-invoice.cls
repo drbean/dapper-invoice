@@ -158,7 +158,7 @@
     \setcounter{colskipcount}{6}
     \setlength\LTleft{0pt}
     \setlength\LTright{0pt}
-    \begin{longtable}{c c @{\hspace{1.5em}} p{.5\textwidth} r @{} l r r}
+    \begin{longtable}{c c @{\hspace{1.1em}} p{.35\textwidth} r @{} l r r}
     \hline
     \noalign{\smallskip}
     {\itemizationHeaderStyle Date} &
