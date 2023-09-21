@@ -29,7 +29,9 @@
 \RequirePackage[hidelinks]{hyperref}
 
 % For adjusting letter spacing
-\RequirePackage{soulutf8}
+% greg
+% \RequirePackage{soulutf8}
+\RequirePackage{soul}
 
 % For "At*" hooks
 \RequirePackage{etoolbox}
