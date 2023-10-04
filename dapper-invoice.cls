@@ -21,6 +21,7 @@
 \ifthenelse{\equal{\dapper@currency}{dollar}}{\newcommand{\currencysym}{NT\$}}{}
 \ifthenelse{\equal{\dapper@currency}{euro}}{\newcommand{\currencysym}{\euro}}{}
 \ifthenelse{\equal{\dapper@currency}{pound}}{\newcommand{\currencysym}{\textsterling}}{}
+\ifthenelse{\equal{\dapper@currency}{yen}}{\newcommand{\currencysym}{JP\faYen}}{}
 
 % Set the standard geometry
 \RequirePackage[hmargin=.75in,vmargin=1in]{geometry}
