@@ -1,0 +1,115 @@
+\documentclass[a4paper]{dapper-invoice}
+%\documentclass[letterpaper,currency=dollar]{dapper-invoice}
+%\documentclass[letterpaper,currency=euro]{dapper-invoice}
+%\documentclass[letterpaper,currency=pound]{dapper-invoice}
+
+\usepackage{fontspec}
+% \setmainfont{texgyrebonum-regular.otf}[Scale=MatchLowercase]
+% \setmainfont{Latin Modern Roman}[Scale=MatchLowercase]
+% \setmainfont{Linux Libertine O}[Scale=MatchLowercase]
+% \setsansfont{Sans Regular}[Scale=MatchLowercase]
+% \setmonofont{Inconsolata}[Scale=MatchLowercase]
+% \setmonofont{Hack}[Scale=MatchLowercase]
+% \setmonofont{Deja Sans Mono}[Scale=MatchLowercase]
+% \setmonofont{Droid Sans Mono}[Scale=MatchLowercase]
+% \setmonofont{Source Code Pro}[Scale=MatchLowercase]
+% \setmonofont{Fira Mono}[Scale=MatchLowercase]
+% \setmonofont{Sans Regular}[Scale=MatchLowercase]
+ \usepackage{xeCJK}
+ \setCJKmainfont{NotoSansCJK-Regular.ttc}[
+         Path = /usr/share/fonts/noto/,
+ 	]
+
+\usepackage{graphicx}
+\graphicspath{ {$HOME/edit/trunk/invoice/} }
+
+\newcommand{\invoiceNo}{108}
+\newcommand{\balance}{4100}
+\newcommand{\duein}{60}% days
+
+\newcommand{\me}{Greg Matheson\\Principal}
+\newcommand{\fullme}{Matheson, Gregory John}
+\newcommand{\clientName}{Meng-Chiao (Joseph) Ho}
+
+\setmetadata{\me}{Academic Editing Services}{\invoiceNo}{\clientName}
+
+\defaultfontfeatures{ Path = ./Fonts/ }
+\usepackage{fontawesome}
+
+\begin{document}
+
+\newfontface\mainLightItalic{OpenSans-LightItalic}
+\makeheader{\ \mainLightItalic Academic Editing Services}{\invoiceNo}
+
+\twocolumnlayout{
+    \begin{infoSection}
+        \infoBox{Client}{\clientName \\
+	                 \\
+			 Institute of Biological Chemistry\\
+			 \\
+			 Academia Sinica\\
+			 \\
+			 128 Sec 2, Academia Road\\
+			 Nankang, Taipei 115\\
+			 Taiwan\\
+					 }
+        \infoBox{Project}{Integrative rPTP encounter approach paper}
+		    \infoBox{Contact}{Meng-Chiao (Joseph) Ho}
+        \infoSub{\small\faPhone}{\small\slshape +886-2-27855696 ext 3080/3162}
+        \infoSub{\small\faEnvelopeO}{\small\slshape \emaillink{joeho@gate.sinica.edu.tw}}
+	\infoBox{抬頭}{Academia Sinica}
+        \infoBox{統編}{}
+        \noalign{\addvspace{4ex}}
+        \infoBox{}{
+            {\large\raisebox{.55\height}\currencysym\huge\formatcurrency{\balance} \arrowbase} \\
+            {\small\color{subduedColor} due \duedate{\duein}}
+        }
+    \end{infoSection}
+}{
+    \begin{infoSection}
+        \infoBox{\arrowtarget Payable To}{
+            \fullme \\
+            634-0051 Japan Nara-ken\\
+	    Kashihara-shi, Shirakashi-cho\\
+	    4-chome, 43-banchi, 3-403\\
+        }
+	    \infoSub{\small\faicon{phone}}{\small\slshape +81~(90)~3969-0818}
+	    \infoSub{\small\faicon{envelope-o}}{\small\slshape \emaillink{drbean@freeshell.org}}
+        \infoSub{\normalsize\faicon{credit-card}}{\small\slshape SHINKIN CENTRAL BANK\\International Operation Center\\9-1 Honmura-cho, Ichigaya,\\Shinjuku-ku, Tokyo SWIFT: ZENBJPJT\\Account: Yamato Shinkin Bank\\Kashihara Branch\\Beneficiary: Matheson Gregory John\\Account Number: 1667 008 2149572}
+        \infoSub{\normalsize\faicon{credit-card}}{\small\slshape JAPAN POST BANK\\Branch: Shirakashi, 458\\Account: 2819850}
+	    \infoSub{\normalsize\faCcPaypal}{\small\slshape Paypal: Pending}
+	    \infoSub{\small\faFlag}{\small\slshape Australia passport: PA9410388\\Japan 個人番号: 0316 9910 3155\\Taiwan 居留證: KC00125148 (舊)}
+    \end{infoSection}
+}
+
+\drawarrow
+
+\addvspace{2ex}
+
+\begin{wordsItemizationWithProject}
+
+    \lineitemp{2023/06/23-07/09}{8200}{0.5}{Editing}{%
+    \item An integative approach unveils\\
+          a distal encounter site for rPTP\\
+          and phosphoro-Src complex formation}%
+
+
+    % \lineitemp{2015/4/11}{0.5}{50}{Invoice}{
+    %     \item Packaged Invoice in .cls file}
+
+    \beginsummary
+
+    \summaryline{Total}{\currencysym\formatcurrency{\InvoiceTotal}}
+
+    \summaryline{Paid}{\currencysym\formatcurrency{0}}
+    \summaryline{Balance Due}{\currencysym\formatcurrency{\balance}} % not really any math support (yet)
+
+\end{wordsItemizationWithProject}
+
+Thanks for letting me read your paper. I hope I can read more of your work in the future.
+
+\includegraphics[angle=00,height=0.06\paperheight,width=0.20\paperwidth]{signature.png}
+ 
+\me
+
+\end{document}
