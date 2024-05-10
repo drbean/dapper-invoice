@@ -167,8 +167,8 @@
     {\itemizationHeaderStyle Date} &
     {\itemizationHeaderStyle Project} &
     {\itemizationHeaderStyle Description} &
-    \multicolumn{2}{l}{\itemizationHeaderStyle Words} &
-    {\itemizationHeaderStyle Rate} &
+    \multicolumn{2}{l}{\itemizationHeaderStyle Units} &
+    {\itemizationHeaderStyle Per unit price} &
     {\itemizationHeaderStyle Amount}
     \\
     \noalign{\smallskip}
