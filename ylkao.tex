@@ -2,6 +2,7 @@
 %\documentclass[letterpaper,currency=dollar]{dapper-invoice}
 %\documentclass[letterpaper,currency=euro]{dapper-invoice}
 %\documentclass[letterpaper,currency=pound]{dapper-invoice}
+% \documentclass[a4paper,currency=yen]{dapper-invoice}
 
 \usepackage{fontspec}
 % \setmainfont{texgyrebonum-regular.otf}[Scale=MatchLowercase]
@@ -18,16 +19,17 @@
  \usepackage{xeCJK}
  \setCJKmainfont{NotoSansCJK-Regular.ttc}[
          Path = /usr/share/fonts/noto/,
-        ]
+ 	]
 
 \usepackage{graphicx}
 \graphicspath{ {$HOME/edit/gitedit/invoice/} }
 
-\newcommand{\invoiceNo}{103}
-\newcommand{\balance}{0}
-\newcommand{\duein}{15}% days
+\newcommand{\invoiceNo}{119}
+\newcommand{\balance}{3000}
+\newcommand{\duein}{60}% days
 
-\newcommand{\me}{Greg Matheson}
+\newcommand{\me}{Greg Matheson\\Principal}
+\newcommand{\fullme}{Matheson, Gregory John}
 \newcommand{\clientName}{YA-LING KAO (高雅鈴)}
 
 \setmetadata{\me}{Academic Editing Services}{\invoiceNo}{\clientName}
@@ -50,7 +52,7 @@
                          澎湖縣馬公市六合路300號\\
                          880, Taiwan\\
                                          }
-        \infoBox{Project}{Bus driver burnout paper}
+        \infoBox{Project}{Solo diner paper}
         \infoBox{Contact}{YA-LING KAO (高雅鈴)}
             \infoSub{\faMobilePhone}{\small\slshape +886-9264115 \#5525}
         \infoSub{\tiny\faEnvelope}{\small\slshape \emaillink{ylkao@gms.npu.edu.tw}}
@@ -65,24 +67,30 @@
 }{
     \begin{infoSection}
         \infoBox{\arrowtarget Payable To}{
-            \me \\
-            Miaoli-shi, Shengli-li,\\
-            16-lin, 133-xiang, 12-hao\\
-            Taiwan
+            \fullme \\
+            634-0051 Japan Nara-ken\\
+	    Kashihara-shi, Shirakashi-cho\\
+	    4-chome, 23-banchi, 3-403\\
         }
-        % \infoSub{\faMobilePhone}{\small\slshape +1~(555)~555-5555}
-        \infoSub{\tiny\faEnvelope}{\small\slshape \emaillink{drbean@freeshell.org}}
+	    \infoSub{\small\faicon{phone}}{\small\slshape +81~(90)~3969-0818}
+	    \infoSub{\small\faicon{envelope-o}}{\small\slshape \emaillink{drbean@freeshell.org}}
+        \infoSub{\normalsize\faicon{credit-card}}{\small\slshape SHINKIN CENTRAL BANK\\International Operation Center\\9-1 Honmura-cho, Ichigaya,\\Shinjuku-ku, Tokyo SWIFT: ZENBJPJT\\Account: Yamato Shinkin Bank\\Kashihara Branch\\Beneficiary: Matheson Gregory John\\Account Number: 1667 008 2149572}
+        \infoSub{\normalsize\faicon{credit-card}}{\small\slshape JAPAN POST BANK\\Branch: Shirakashi, 458\\Account: 14520-28198501}
+	    \infoSub{\normalsize\faCcPaypal}{\small\slshape Paypal:\\drbean+personal@freeshell.org\\https://paypal.me/GregoryMatheson}
+	    \infoSub{\small\faFlag}{\small\slshape Australia passport: PA9410388\\Japan 個人番号: 0316 9910 3155\\Taiwan 居留證: KC00125148 (舊)}
+	    \infoSub{\small\faCalendar}{\small\slshape Birthdate: 19490129}
     \end{infoSection}
 }
 
 \drawarrow
 
-\addvspace{2ex}
+\addvspace{-1ex}
 
 \begin{wordsItemizationWithProject}
 
-    \lineitemp{2022/7/30}{4200}{0.5}{Editing}{
-        \item Text\_E1A1.doc}
+    \lineitemp{2024/09/13-20}{6000}{0.5}{Editing}{%
+    \item TEXT to Dr. Bean\\solo dining.docx}%
+
 
     % \lineitemp{2015/4/11}{0.5}{50}{Invoice}{
     %     \item Packaged Invoice in .cls file}
@@ -91,7 +99,7 @@
 
     \summaryline{Total}{\currencysym\formatcurrency{\InvoiceTotal}}
 
-    \summaryline{Paid}{\currencysym\formatcurrency{2100}}
+    \summaryline{Paid}{\currencysym\formatcurrency{0}}
     \summaryline{Balance Due}{\currencysym\formatcurrency{\balance}} % not really any math support (yet)
 
 \end{wordsItemizationWithProject}
