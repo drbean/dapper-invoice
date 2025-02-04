@@ -24,8 +24,8 @@
 \usepackage{graphicx}
 \graphicspath{ {$HOME/edit/trunk/invoice/} }
 
-\newcommand{\invoiceNo}{117}
-\newcommand{\balance}{0}
+\newcommand{\invoiceNo}{123}
+\newcommand{\balance}{360}
 \newcommand{\duein}{60}% days
 
 \newcommand{\me}{Greg Matheson\\Principal}
@@ -59,12 +59,12 @@
 		 \hspace*{-1.0cm}
 		 Kaohsiung,Taiwan 804201\\
 				 }
-        \infoBox{Project}{Kuroshio paper}
+        \infoBox{Project}{Geoscience meet abstracts}
         \infoBox{Contact}{林艷慧 (Yen-hui Lin)}
         \infoSub{\small\faPhone}{\small\slshape +886-7-5252000 ext. 5117}
         \infoSub{\small\faEnvelopeO}{\small\slshape \emaillink{yhlin5545@gmail.com}}
         \infoBox{抬頭}{National Sun Yat-sen University}
-        \infoBox{Fee}{NT1,000}
+        \infoBox{Fee}{NT360}
         \noalign{\addvspace{4ex}}
         \infoBox{}{
             {\large\raisebox{.55\height}\currencysym\huge\formatcurrency{\balance} \arrowbase} \\
@@ -91,14 +91,18 @@
 
 \drawarrow
 
-\addvspace{-1ex}
+\addvspace{+0ex}
 
 \begin{wordsItemizationWithProject}
 
-    \lineitemp{2024/8/14-16}{1000}{1}{Editing}{%
-    \item Further post-submission revision\\
-	    of Kuroshio path determination\\
-	    paper}%
+    \lineitemp{2025/2/3-4}{220}{0.5}{Editing}{%
+    \item Nanwan Bay current abstract}
+        \noalign{\addvspace{-1ex}}
+    \lineitemp{.}{220}{0.5}{.}{%
+    \item ArcWatch XCTD deployment abstract}
+        \noalign{\addvspace{-1ex}}
+    \lineitemp{.}{280}{0.5}{.}{%
+    \item Kuroshio impingement abstract}
 
 
     % \lineitemp{2015/4/11}{0.5}{50}{Invoice}{
@@ -108,7 +112,7 @@
 
     \summaryline{Total}{\currencysym\formatcurrency{\InvoiceTotal}}
 
-    \summaryline{Paid}{\currencysym\formatcurrency{1000}}
+    \summaryline{Paid}{\currencysym\formatcurrency{0}}
     \summaryline{Balance Due}{\currencysym\formatcurrency{\balance}} % not really any math support (yet)
 
 \end{wordsItemizationWithProject}
