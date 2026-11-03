@@ -19,12 +19,12 @@
  \usepackage{xeCJK}
  \setCJKmainfont{NotoSansCJK-Regular.ttc}[
          Path = /usr/share/fonts/noto/,
- 	]
+    ]
 
 \usepackage{graphicx}
 \graphicspath{ {$HOME/edit/trunk/invoice/} }
 
-\newcommand{\invoiceNo}{135}
+\newcommand{\invoiceNo}{145}
 \newcommand{\balance}{0}
 \newcommand{\duein}{60}% days
 
@@ -46,25 +46,25 @@
     \begin{infoSection}
         \infoBox{Client}{~\\%
 \\
-		 \hspace*{-1.0cm}
-		 \clientName \\
+         \hspace*{-1.0cm}
+         \clientName \\
 \\
-		 \hspace*{-1.0cm}
-		 Department of Oceanography,\\
-		 \hspace*{-1.0cm}
-		 National Sun Yat-sen University\\
+         \hspace*{-1.0cm}
+         Department of Oceanography,\\
+         \hspace*{-1.0cm}
+         National Sun Yat-sen University\\
 \\
-		 \hspace*{-1.0cm}
-		 No.70 Lien-hai Road,\\
-		 \hspace*{-1.0cm}
-		 Kaohsiung,Taiwan 804201\\
-				 }
+         \hspace*{-1.0cm}
+         No.70 Lien-hai Road,\\
+         \hspace*{-1.0cm}
+         Kaohsiung,Taiwan 804201\\
+                 }
         \infoBox{Project}{南灣HFR study}
         \infoBox{Contact}{林艷慧 (Yen-hui Lin)}
         \infoSub{\small\faPhone}{\small\slshape +886-7-5252000 ext. 5117}
         \infoSub{\small\faEnvelopeO}{\small\slshape \emaillink{yhlin5545@gmail.com}}
         \infoBox{抬頭}{National Sun Yat-sen University}
-        \infoBox{Fee}{NT2590}
+        \infoBox{Fee}{NT3460}
         \noalign{\addvspace{4ex}}
         \infoBox{}{
             {\large\raisebox{.55\height}\currencysym\huge\formatcurrency{\balance} \arrowbase} \\
@@ -76,16 +76,16 @@
         \infoBox{\arrowtarget Payable To}{
             \fullme \\
             634-0051 Japan Nara-ken\\
-	    Kashihara-shi, Shirakashi-cho\\
-	    4-chome, 23-banchi, 3-403\\
+        Kashihara-shi, Shirakashi-cho\\
+        4-chome, 23-banchi, 3-403\\
         }
-	    \infoSub{\small\faicon{phone}}{\small\slshape +81~(90)~3969-0818}
-	    \infoSub{\small\faicon{envelope-o}}{\small\slshape \emaillink{drbean@freeshell.org}}
+        \infoSub{\small\faicon{phone}}{\small\slshape +81~(90)~3969-0818}
+        \infoSub{\small\faicon{envelope-o}}{\small\slshape \emaillink{drbean@freeshell.org}}
         \infoSub{\normalsize\faicon{credit-card}}{\small\slshape SHINKIN CENTRAL BANK\\International Operation Center\\9-1 Honmura-cho, Ichigaya,\\Shinjuku-ku, Tokyo SWIFT: ZENBJPJT\\Account: Yamato Shinkin Bank\\Kashihara Branch\\Beneficiary: Matheson Gregory John\\Account Number: 1667 008 2149572}
         \infoSub{\normalsize\faicon{credit-card}}{\small\slshape JAPAN POST BANK\\Branch: Shirakashi, 458\\Account: 14520-28198501}
-	    \infoSub{\normalsize\faCcPaypal}{\small\slshape Paypal:\\drbean+personal@freeshell.org\\https://paypal.me/GregoryMatheson}
-	    \infoSub{\small\faFlag}{\small\slshape Australia passport: PA9410388\\Japan 個人番号: 0316 9910 3155\\Taiwan 居留證: KC00125148 (舊)}
-	    \infoSub{\small\faCalendar}{\small\slshape Birthdate: 19490129}
+        \infoSub{\normalsize\faCcPaypal}{\small\slshape Paypal:\\drbean+personal@freeshell.org\\https://paypal.me/GregoryMatheson}
+        \infoSub{\small\faFlag}{\small\slshape Australia passport: PA9410388\\Japan 個人番号: 0316 9910 3155\\Taiwan 居留證: KC00125148 (舊)}
+        \infoSub{\small\faCalendar}{\small\slshape Birthdate: 19490129}
     \end{infoSection}
 }
 
@@ -95,9 +95,11 @@
 
 \begin{wordsItemizationWithProject}
 
-    \lineitemp{2026/4/16-28}{5180}{0.5}{Editing}{%
-    \item Shao\_et\_al20260414\_for\_Greg\\
-	    docx editing}
+    \lineitemp{2026/10/15-21}{6920}{0.5}{Editing}{%
+    \item Shao\_et\_al\_20261015\_\\
+	    revise\_v3\_forGreg.docx
+    \item Supplementary Materials 20261015\\
+	    \_forGreg.docx}
         \noalign{\addvspace{-1ex}}
 
 
@@ -108,7 +110,7 @@
 
     \summaryline{Total}{\currencysym\formatcurrency{\InvoiceTotal}}
 
-    \summaryline{Paid}{\currencysym\formatcurrency{2590}}
+    \summaryline{Paid}{\currencysym\formatcurrency{3460}}
     \summaryline{Balance Due}{\currencysym\formatcurrency{\balance}} % not really any math support (yet)
 
 \end{wordsItemizationWithProject}
